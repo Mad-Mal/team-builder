@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import Form from './Form';
@@ -13,10 +12,32 @@ function App() {
 
   const [teamList, setTeamList] = useState(team);
 
+  function submit() {
+
+    const nameInput = document.getElementById('nameInput')
+    const emailInput = document.getElementById('emailInput')
+    const roleSelect = document.getElementById('roleSelect')
+    
+    const newTeamMember = {
+      name: nameInput.value,
+      email: emailInput.value,
+      role: roleSelect.value
+    }
+    
+    setTeamList([...teamList, newTeamMember])
+
+    console.log(team)
+
+    nameInput.value = ''
+    emailInput.value = ''
+    roleSelect.value = ''
+  }
+
   return (
     <div className="App">
       <header className="App-header">
       <Form></Form>
+      <button id='addButton' onClick={submit}>Add Member</button>
       </header>
       <div className="innerCont">
         {team.map((member) => {

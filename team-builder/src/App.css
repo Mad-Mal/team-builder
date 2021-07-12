@@ -17,11 +17,12 @@
   background-color: #282c34;
   height: 6em;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin-top: 1em;
 }
 
 .App-link {
@@ -63,4 +64,15 @@
 
 html {
   background-color:#282c34;
+}
+
+#addButton {
+  background-color: #282c34;
+  border-color: white;
+  border-style: solid;
+  border-radius: 4px;
+  color: white;
+  margin: 1em;
+  padding: .5em;
+  width: 10em;
 }

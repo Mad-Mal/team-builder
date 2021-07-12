@@ -30,7 +30,6 @@ const Form = () => {
                     <option value='5'>Other</option>
                 </select>
             </form>
-            <button id='addButton'>Add</button>
         </div>
     )
 }
